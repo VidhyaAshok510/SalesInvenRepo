@@ -5,18 +5,11 @@
     <classes>
       <class name="com.salesinventory.SalesInvenTest">
         <methods>
-          <include name="configBS"/>
-          <include name="editCustomerButtonTest"/>
-          <include name="configAS"/>
-          <include name="createSupplierTest"/>
-          <include name="newProductTest"/>
-          <include name="productCreateTest"/>
-          <include name="createEmployeeTest"/>
-          <include name="orderTest"/>
           <include name="configBC"/>
+          <include name="configBS"/>
           <include name="transactionValidateTest"/>
-          <include name="newCustomerTest"/>
           <include name="configAC"/>
+          <include name="configAS"/>
           <include name="configAM"/>
           <include name="configBM"/>
         </methods>

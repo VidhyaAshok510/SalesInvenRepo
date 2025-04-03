@@ -19,7 +19,7 @@ public class TransactionPage {
 	private WebElement viewButton;
 	@FindBy(xpath="//th[text()='Products']/../../..//td[1]")
 	private WebElement prodtNameHeader;
-	@FindBy(xpath="//td[@class='font-weight-bold text-right text-primary']")
+	@FindBy(xpath="//th[text()='Products']/../../..//td[4]")
 	private WebElement prodtPriceHeader;
 	public WebElement getSearchField() {
 		return searchField;
