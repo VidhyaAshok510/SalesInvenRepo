@@ -1,4 +1,4 @@
-package com.salesinventory.testng;
+package com.salesinventory;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
