@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtility {
 public String getDataFromExcel(String sheetName,int rowNum,int cellNum) throws Throwable {
-	FileInputStream fis = new FileInputStream("./src/test/resources/testdata/testdatafile.xlsx");
+	FileInputStream fis = new FileInputStream("./TestData/TestScript.xlsx");
 	Workbook wb = WorkbookFactory.create(fis);
 	String data= wb.getSheet(sheetName).getRow(rowNum).getCell(cellNum).getStringCellValue();
 	wb.close();
@@ -20,7 +20,7 @@ public String getDataFromExcel(String sheetName,int rowNum,int cellNum) throws T
 	
 }
 public int getRowCount(String sheetName) throws Throwable, IOException {
-	FileInputStream fis = new FileInputStream("./src/test/resources/testdata/testdatafile.xlsx");
+	FileInputStream fis = new FileInputStream("./TestData/TestScript.xlsx");
 	Workbook wb = WorkbookFactory.create(fis);
 	int rowCount= wb.getSheet(sheetName).getLastRowNum();
 	wb.close();
@@ -28,10 +28,10 @@ public int getRowCount(String sheetName) throws Throwable, IOException {
 	
 }
 public void setDataIntoExcel(String sheetName,int rowNum,int cellNum,String data) throws Throwable, IOException {
-	FileInputStream fis = new FileInputStream("./src/test/resources/testdata/testdatafile.xlsx");
+	FileInputStream fis = new FileInputStream("./TestData/TestScript.xlsx");
 	Workbook wb = WorkbookFactory.create(fis);
 	wb.getSheet(sheetName).getRow(rowNum).createCell(cellNum).setCellValue(data);
-	FileOutputStream fos = new FileOutputStream("./testdata/testdatafile.xlsl");
+	FileOutputStream fos = new FileOutputStream("./TestData/TestScript.xlsx");
 	wb.write(fos);
 	wb.close();
 }

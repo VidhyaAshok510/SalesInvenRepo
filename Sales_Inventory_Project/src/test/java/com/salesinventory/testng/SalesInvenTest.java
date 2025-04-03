@@ -31,6 +31,7 @@ public class SalesInvenTest extends BaseClass {
 		String ADMINPASS = fLib.getDataFromPropertiesFile("admin_password");
 		lp.loginToApp(URL, ADMINUSER, ADMINPASS);
 		Robot robot = new Robot();
+		Thread.sleep(2000);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
@@ -155,12 +156,14 @@ public class SalesInvenTest extends BaseClass {
 
 		lp.loginToApp(URL, ADMINUSER, ADMINPASS);
 		Robot robot = new Robot();
+		Thread.sleep(2000);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		HomePage hp = new HomePage(driver);
 
 		hp.getEmployeeLink().click();
 		EmployeePage ep = new EmployeePage(driver);
+		Thread.sleep(2000);
 		String firstName = eLib.getDataFromExcel("Customer", 3, 1);
 		String lastName = eLib.getDataFromExcel("Customer", 3, 2);
 		String gender = eLib.getDataFromExcel("Customer", 3, 3);
