@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+<listeners>
+<listener class-name="com.salesinventory.generic.listenerutility.ListenerImpleClass"></listener>
+</listeners>
+  <test  name="Test1">
+    <classes>
+      <class name="com.salesinventory.testng.SalesInvenTest">
+      <methods>
+      <include name="createEmployeeTest"></include>
+      <include name="newProductTest"></include>
+       <include name="orderTest"></include>
+      <include name="transactionValidateTest"></include>
+      
+      </methods>
+      </class>
+    </classes>
+    </test>
+     <!-- Test -->
+</suite> <!-- Suite -->
